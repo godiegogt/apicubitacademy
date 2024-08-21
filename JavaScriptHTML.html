@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Sass with Node.js</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="src/css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="app.js"></script>
+
+</head>
+
+<body class="font-sans">
+    <header id="header">
+
+    </header>
+      <!-- Main Content -->
+      <div class="container mx-auto px-4 py-6">
+        <div class="grid gap-6">
+           
+            <!-- Phase 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h1 class="text-3xl font-bold mb-4">Learning JavaScript</h1>
+                <h2 class="text-2xl font-semibold mb-4">Phase 1: JavaScript Fundamentals</h2>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold">1. Introduction to JavaScript</h3>
+                    <p class="mt-2">JavaScript is a programming language that runs in the client’s browser and allows you to create interactive web pages.</p>
+                    <pre class=" p-4 rounded mt-2">
+console.log("Hello, world!");
+                    </pre>
+                    <p class="mt-2"><strong>Resources:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="text-blue-600 underline">MDN Web Docs: JavaScript</a>, <a href="https://eloquentjavascript.net/" class="text-blue-600 underline">Eloquent JavaScript</a>.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold">2. Basic Syntax</h3>
+                    <p class="mt-2">JavaScript syntax is the set of rules that defines how to write code.</p>
+                    <pre class=" p-4 rounded mt-2">
+let name = "John";
+const PI = 3.14159;
+let isAdult = age >= 18;
+                    </pre>
+                    <p class="mt-2"><strong>Resources:</strong> <a href="https://javascript.info/first-steps" class="text-blue-600 underline">JavaScript Info: Basics</a>, <a href="https://github.com/getify/You-Dont-Know-JS" class="text-blue-600 underline">You Don’t Know JS (Book Series)</a>.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold">3. Control Structures</h3>
+                    <p class="mt-2">Control structures in JavaScript are the tools that allow you to control the program's flow.</p>
+                    <pre class=" p-4 rounded mt-2">
+if (age >= 18) {
+    console.log("You are an adult");
+} else {
+    console.log("You are a minor");
+}
+
+for (let i = 0; i &lt; 5; i++) {
+    console.log(i);
+}
+                    </pre>
+                    <p class="mt-2"><strong>Resources:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling" class="text-blue-600 underline">MDN Web Docs: Control Flow</a>, <a href="https://www.oreilly.com/library/view/javascript-the-definitive/9781491952016/" class="text-blue-600 underline">JavaScript: The Definitive Guide</a>.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold">4. Functions</h3>
+                    <p class="mt-2">Functions are blocks of code that perform a specific task and can be reused in different parts of the program.</p>
+                    <pre class=" p-4 rounded mt-2">
+function sum(a, b) {
+    return a + b;
+}
+
+let result = sum(5, 3);
+console.log(result);
+                    </pre>
+                    <p class="mt-2"><strong>Resources:</strong> <a href="https://eloquentjavascript.net/03_functions.html" class="text-blue-600 underline">Eloquent JavaScript: Functions</a>, <a href="https://javascript.info/function-basics" class="text-blue-600 underline">JavaScript Info: Functions</a>.</p>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4">Phase 2: DOM Manipulation</h2>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold">5. Introduction to the DOM</h3>
+                    <p class="mt-2">The DOM (Document Object Model) is a structured representation of the HTML document as a tree of nodes.</p>
+                    <pre class=" p-4 rounded mt-2">
+const header = document.getElementById('myHeader');
+console.log(header.textContent);
+                    </pre>
+                    <p class="mt-2"><strong>Resources:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" class="text-blue-600 underline">MDN Web Docs: Document Object Model (DOM)</a>, <a href="https://www.amazon.com/JavaScript-JQuery-Interactive-Front-End-Development/dp/1118531647" class="text-blue-600 underline">JavaScript and JQuery: Interactive Front-End Web Development</a>.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold">6. DOM Manipulation</h3>
+                    <p class="mt-2">Manipulating the DOM involves changing the structure, style, or content of HTML elements through JavaScript.</p>
+                    <pre class=" p-4 rounded mt-2">
+const paragraph = document.querySelector('p');
+paragraph.textContent = 'This is new text';
+paragraph.style.color = 'blue';
+                    </pre>
+                    <p class="mt-2"><strong>Resources:</strong> <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents" class="text-blue-600 underline">MDN Web Docs: Manipulating Documents</a>, <a href="https://www.wiley.com/en-us/JavaScript+and+jQuery%3A+Interactive+Front+End+Web+Development-p-9781118531648" class="text-blue-600 underline">JavaScript & JQuery: Interactive Front-End Web Development</a>.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold">7. Events</h3>
+                    <p class="mt-2">Events in JavaScript are actions or occurrences that happen in the browser, such as a user click or a page load.</p>
+                    <pre class=" p-4 rounded mt-2">
+const button = document.querySelector('button');
+button.addEventListener('click', function() {
+    alert('Button clicked!');
+});
+                    </pre>
+                    <p class="mt-2"><strong>Resources:</strong> <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" class="text-blue-600 underline">MDN Web Docs: Introduction to events</a>, <a href="https://www.wiley.com/en-us/JavaScript+and+jQuery%3A+Interactive+Front+End+Web+Development-p-9781118531648" class="text-blue-600 underline">JavaScript & JQuery: Events</a>.</p>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4">Phase 3: Diving Deeper into JavaScript</h2>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold">8. Advanced Functions</h3>
+                    <p class="mt-2">Advanced functions in JavaScript include concepts like closures, callbacks, and promises.</p>
+                    <pre class=" p-4 rounded mt-2">
+function createCounter() {
+    let counter = 0;
+    return function() {
+        counter++;
+        return counter;
+    };
+}
+
+const counter1 = createCounter();
+console.log(counter1()); // 1
+console.log(counter1()); // 2
+                    </pre>
+                    <p class="mt-2"><strong>Resources:</strong> <a href="https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/scope-closures" class="text-blue-600 underline">You Don’t Know JS: Scope & Closures</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises" class="text-blue-600 underline">MDN Web Docs: Promises</a>.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold">9. Objects and Arrays</h3>
+                    <p class="mt-2">Objects are collections of key-value pairs, while arrays are ordered lists of values.</p>
+                    <pre class=" p-4 rounded mt-2">
+let person = {
+    name: "John",
+    age: 30,
+    greet: function() {
+        console.log("Hello, " + this.name);
+    }
+};
+person.greet();
+
+let fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits[0]);
+                    </pre>
+                    <p class="mt-2"><strong>Resources:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects" class="text-blue-600 underline">MDN Web Docs: Working with objects</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="text-blue-600 underline">MDN Web Docs: Arrays</a>.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold">10. Object-Oriented Programming (OOP)</h3>
+                    <p class="mt-2">OOP in JavaScript allows you to create object models with attributes and methods, facilitating code reuse and organization.</p>
+                    <pre class=" p-4 rounded mt-2">
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    greet() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+}
+
+const john = new Person("John", 30);
+john.greet();
+                    </pre>
+                    <p class="mt-2"><strong>Resources:</strong> <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS" class="text-blue-600 underline">MDN Web Docs: Object-oriented programming</a>, <a href="https://www.oreilly.com/library/view/javascript-the-good/9780596517748/" class="text-blue-600 underline">JavaScript: The Good Parts</a>.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

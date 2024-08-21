@@ -5,108 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Using Sass with Node.js</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-        .content-wrapper {
-            padding: 30px;
-            background-color: #1e1e1e;
-            border-radius: 8px;
-        }
-        h1, h2 {
-            color: #bb86fc;
-        }
-        pre {
-            background-color: #333;
-            color: #e0e0e0;
-            padding: 15px;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        code {
-            color: #bb86fc;
-        }
-        a {
-            color: #03dac6;
-        }
-        a:hover {
-            color: #018786;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="src/css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="app.js"></script>
+
 </head>
 <body>
-    <div class="container content-wrapper">
-        <h1>Using Sass with Node.js</h1>
-        <p>This guide will help you set up and use Sass in a Node.js project. Below are the detailed steps:</p>
+   <div id="header">
 
-        <h2>Step 1: Set Up a Node.js Project</h2>
-        <p>Initialize a new Node.js project:</p>
-        <pre><code>mkdir my-sass-project
-cd my-sass-project
-npm init -y</code></pre>
-        <p>This creates a new directory, navigates into it, and initializes a <code>package.json</code> file.</p>
+   </div >
 
-        <h2>Step 2: Install Sass</h2>
-        <p>Install Sass as a development dependency:</p>
-        <pre><code>npm install sass --save-dev</code></pre>
-
-        <h2>Step 3: Create Sass Files</h2>
-        <p>Create a directory for your Sass files and add your <code>.scss</code> files:</p>
-        <pre><code>mkdir scss
-touch scss/styles.scss</code></pre>
-        <p>Example content of <code>styles.scss</code>:</p>
-        <pre><code>$primary-color: #3498db;
-
-body {
-    font-family: Arial, sans-serif;
-    color: $primary-color;
-}
-
-h1 {
-    color: darken($primary-color, 10%);
-}</code></pre>
-
-        <h2>Step 4: Compile Sass to CSS</h2>
-        <p>Add a script to your <code>package.json</code> for compiling Sass:</p>
-        <pre><code>"scripts": {
-  "sass": "sass scss:css --style compressed"
-}</code></pre>
-        <p>Then, run the following command to compile your Sass files:</p>
-        <pre><code>npm run sass</code></pre>
-
-        <h2>Step 5: Watch for Changes (Optional)</h2>
-        <p>Set up Sass to watch your files for changes:</p>
-        <pre><code>"scripts": {
-  "sass": "sass --watch scss:css --style compressed"
-}</code></pre>
-        <p>Run the watch command to automatically compile your files upon changes:</p>
-        <pre><code>npm run sass</code></pre>
-
-        <h2>Step 6: Use Compiled CSS in Your Project</h2>
-        <p>Link the compiled CSS file in your HTML:</p>
-        <pre><code>&lt;link rel="stylesheet" href="css/styles.css"&gt;</code></pre>
-
-        <h2>Step 7: Optional - Use with Build Tools (e.g., Webpack, Gulp)</h2>
-        <p>Integrate Sass with your build tools if necessary. For example, using Webpack:</p>
-        <pre><code>npm install sass-loader css-loader style-loader --save-dev</code></pre>
-        <p>Configure Webpack to use the loaders:</p>
-        <pre><code>module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ],
-      },
-    ],
-  },
-};</code></pre>
-    </div>
 </body>
 </html>
